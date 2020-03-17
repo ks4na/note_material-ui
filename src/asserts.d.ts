@@ -1,0 +1,2 @@
+// css
+declare module '*.css'
