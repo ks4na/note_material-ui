@@ -5,7 +5,9 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    'jest/globals': true,
   },
+  plugins: ['jest'],
   parser: '@typescript-eslint/parser', // 指定eslint的解析器
   extends: [
     'plugin:compat/recommended', // eslint-plugin-compat 检查 js API 兼容性
