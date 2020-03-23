@@ -1,5 +1,5 @@
 // 定义 compat 插件的 polyfills 声明
-const compatPolyfills = []
+const compatPolyfills = ['Symbol.iterator']
 
 module.exports = {
   env: {
