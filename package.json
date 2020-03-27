@@ -1,8 +1,8 @@
 {
-  "name": "learn-jest",
+  "name": "material-ui-prac",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:ks4na/learn-jest.git",
+  "repository": "",
   "author": "ks4na <1017086648@qq.com>",
   "license": "MIT",
   "devDependencies": {
