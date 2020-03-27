@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 interface PropTypes {
   page: string
-  children: string
+  children: React.ReactNode
 }
 
 export default function Link({ page, children }: PropTypes): JSX.Element {
