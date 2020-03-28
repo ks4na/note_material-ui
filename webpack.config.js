@@ -7,8 +7,18 @@ module.exports = {
   output: {
     path: path.join(__dirname, './dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   devtool: 'cheap-module-eval-source-map',
+  devServer: {
+    host: '0.0.0.0', // 允许以非localhost方式访问，方便手机，其他机器访问本地项目
+    historyApiFallback: {
+      disableDotRule: true,
+    }, // browserRouter本地测试需要开启
+    disableHostCheck: true, // 本地hosts劫持测试时需要开启
+    // 关闭 WDS 在控制台的 log
+    clientLogLevel: 'none',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, './src/index.html'),
