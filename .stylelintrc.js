@@ -15,5 +15,7 @@ module.exports = {
         ignore: snubfPluginIgnores,
       },
     ],
+    'selector-type-no-unknown': null,
+    'selector-type-case': null,
   },
 }
