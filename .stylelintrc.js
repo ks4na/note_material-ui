@@ -17,5 +17,9 @@ module.exports = {
     ],
     'selector-type-no-unknown': null,
     'selector-type-case': null,
+    'selector-pseudo-class-no-unknown': [
+      true,
+      { ignorePseudoClasses: ['global'] },
+    ],
   },
 }
