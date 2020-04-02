@@ -17,13 +17,13 @@ export default function App(): JSX.Element {
   const theme = useTheme()
   const dispatch = useDispatch()
 
-  const handleClick = function(): void {
+  const handleClick = React.useCallback(() => {
     const currentThemeType = theme.palette.type
-    dispatch(alterThemeType(currentThemeType === 'light' ? 'dark' : 'light'))
-  }
+    dispatch(alterThemeType(currentThemeType !== 'dark' ? 'dark' : 'light'))
+  }, [dispatch, theme.palette.type])
 
   return (
-    <Box style={{ backgroundColor: theme.palette.background.default }}>
+    <Box>
       <Box overflow="hidden">
         <h1 className={styles.h1}>App.tsx</h1>
         <p>axios.defaults.baseUrl: {axios.defaults.baseURL}</p>
