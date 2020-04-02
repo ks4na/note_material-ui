@@ -8,7 +8,6 @@
 
 :global(html) {
   height: 100%;
-  overflow-y: scroll;
 }
 
 :global(body) {
