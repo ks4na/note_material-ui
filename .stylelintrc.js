@@ -15,5 +15,11 @@ module.exports = {
         ignore: snubfPluginIgnores,
       },
     ],
+    'selector-type-no-unknown': null,
+    'selector-type-case': null,
+    'selector-pseudo-class-no-unknown': [
+      true,
+      { ignorePseudoClasses: ['global'] },
+    ],
   },
 }
