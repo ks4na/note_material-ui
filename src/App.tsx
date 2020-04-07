@@ -9,6 +9,7 @@ import StylesSystemDemo from './components/Styles'
 import AdvancedStyleSystemDemo from './components/Styles/AdvancedStyleSystem'
 import ThemeCustomizationDemo from './components/CustomizationTheme'
 import SystemIndex from './components/System'
+import ComponentsIndex from './components/Components'
 
 import { useDispatch } from 'react-redux'
 import { alterThemeType } from './models/actions'
@@ -28,7 +29,11 @@ export default function App(): JSX.Element {
         <h1 className={styles.h1}>App.tsx</h1>
         <p>axios.defaults.baseUrl: {axios.defaults.baseURL}</p>
         <img src={logo} alt="" />
-        <Button color="primary" onClick={handleClick}>
+        <Button
+          variant={theme.palette.type === 'dark' ? 'contained' : undefined}
+          color="primary"
+          onClick={handleClick}
+        >
           toggle theme
         </Button>
         <Checkbox defaultChecked />
@@ -59,6 +64,11 @@ export default function App(): JSX.Element {
             system
           </Link>
         </li>
+        <li>
+          <Link component={NavLink} to="/components">
+            components
+          </Link>
+        </li>
       </ul>
       <hr />
       <Switch>
@@ -67,6 +77,7 @@ export default function App(): JSX.Element {
         <Route path="/styles" component={StylesSystemDemo} />
         <Route path="/theme-customization" component={ThemeCustomizationDemo} />
         <Route path="/system" component={SystemIndex} />
+        <Route path="/components" component={ComponentsIndex} />
         <Redirect to="/" />
       </Switch>
     </Box>
